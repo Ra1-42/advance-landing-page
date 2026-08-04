@@ -1,6 +1,6 @@
 const revealElements = document.querySelectorAll('.reveal');
-const heroHeading = document.querySelector('.hero-copy h1');
-const phrases = ['audiences to action', 'experiences that convert', 'modern digital stories'];
+const heroHeading = document.querySelector('.hero-copy h1') || document.querySelector('.page-hero h2');
+const typingPhrases = ['motion-rich pages', 'vibrant launch experiences', 'design systems with depth'];
 let phraseIndex = 0;
 let charIndex = 0;
 
@@ -19,9 +19,10 @@ function revealOnScroll() {
 }
 
 function typeHeroText() {
-    if (!heroHeading) return;
-    const baseText = 'Beautifully crafted motion UI for ';
-    const currentPhrase = phrases[phraseIndex];
+    if (!heroHeading || !heroHeading.closest('.hero')) return;
+
+    const baseText = 'Launch vibrant, motion-rich pages that feel ';
+    const currentPhrase = typingPhrases[phraseIndex];
     heroHeading.textContent = baseText + currentPhrase.slice(0, charIndex);
 
     if (charIndex < currentPhrase.length) {
@@ -30,20 +31,25 @@ function typeHeroText() {
     } else {
         setTimeout(() => {
             charIndex = 0;
-            phraseIndex = (phraseIndex + 1) % phrases.length;
+            phraseIndex = (phraseIndex + 1) % typingPhrases.length;
             setTimeout(typeHeroText, 1000);
         }, 1800);
     }
 }
 
-function initForm() {
-    const form = document.getElementById('newsletterForm');
-    if (!form) return;
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const email = form.querySelector('input[name="email"]').value;
-        alert(`Thanks! We'll send the design guide to ${email}`);
-        form.reset();
+function initForms() {
+    const forms = document.querySelectorAll('form');
+    forms.forEach((form) => {
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const emailInput = form.querySelector('input[type="email"]');
+            const nameInput = form.querySelector('input[name="name"]');
+            const emailValue = emailInput ? emailInput.value : '';
+            const nameValue = nameInput ? nameInput.value : '';
+            const message = nameValue ? `${nameValue}, thanks!` : 'Thanks!';
+            alert(`${message} We'll follow up at ${emailValue || 'your email'}.`);
+            form.reset();
+        });
     });
 }
 
@@ -51,13 +57,13 @@ function initTopbarCta() {
     const button = document.getElementById('topbarCta');
     if (!button) return;
     button.addEventListener('click', () => {
-        window.location.hash = '#connect';
+        window.location.href = 'contact.html';
     });
 }
 
 window.addEventListener('DOMContentLoaded', () => {
     revealOnScroll();
     typeHeroText();
-    initForm();
+    initForms();
     initTopbarCta();
 });
