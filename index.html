@@ -3,15 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advance Landing page</title>
+    <title>Nova Labs • Award Winning UI</title>
+    <meta name="description" content="Modern animated landing page with motion-driven UI, interactive sections, and a polished digital experience.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="page-shell">
+        <header class="topbar">
+            <a class="brand" href="#hero">Nova Labs</a>
+            <nav class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#features">Features</a>
+                <a href="#showcase">Showcase</a>
+                <a href="#connect">Contact</a>
+            </nav>
+            <button class="topbar-cta" id="topbarCta">Launch App</button>
+        </header>
 
-    <div class="main-container">
-        <div class="header">Hello</div>
+        <main>
+            <section class="hero section" id="hero">
+                <div class="hero-copy reveal">
+                    <span class="eyebrow">Award-winning digital experience</span>
+                    <h1>Beautifully crafted motion UI for modern brands.</h1>
+                    <p>Turn attention into action with an animated landing page that feels premium, fast, and highly engaging across every device.</p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#connect">Get Started</a>
+                        <a class="button button-secondary" href="#showcase">See Demo</a>
+                    </div>
+
+                    <div class="hero-badges">
+                        <div>
+                            <strong>120%</strong>
+                            <span>engagement uplift</span>
+                        </div>
+                        <div>
+                            <strong>70+</strong>
+                            <span>modern components</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal">
+                    <div class="floating-cards">
+                        <div class="card card-large">
+                            <div class="card-label">Realtime insights</div>
+                            <div class="card-value">42.8K</div>
+                            <div class="card-meta">Visitors this week</div>
+                        </div>
+                        <div class="card card-small card-top">
+                            <span>CTA</span>
+                            <strong>+32%</strong>
+                        </div>
+                        <div class="card card-small card-bottom">
+                            <span>Conversion</span>
+                            <strong>9.8%</strong>
+                        </div>
+                    </div>
+
+                    <div class="device-shell">
+                        <div class="device-window">
+                            <div class="dash-row">
+                                <div class="metric">
+                                    <span>Reach</span>
+                                    <strong>98%</strong>
+                                </div>
+                                <div class="metric">
+                                    <span>Velocity</span>
+                                    <strong>1.8x</strong>
+                                </div>
+                            </div>
+                            <div class="graph"></div>
+                            <div class="dash-footer">
+                                <span>Active campaigns</span>
+                                <strong>4 live</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features section" id="features">
+                <div class="section-intro reveal">
+                    <span class="eyebrow">What makes it premium</span>
+                    <h2>Every detail is designed to delight.</h2>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card reveal">
+                        <h3>Motion-led UI</h3>
+                        <p>Subtle transitions and floating elements keep users focused and make interactions feel alive.</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <h3>Performance-first</h3>
+                        <p>Lightweight visuals, fast load patterns, and a polished layout that stays smooth on every screen.</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <h3>Adaptive design</h3>
+                        <p>Mobile-ready structure with fluid spacing for tablets, desktop, and narrow viewports.</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <h3>Interactive details</h3>
+                        <p>Hover effects, dynamic cards, and a subtle parallax atmosphere that feels professional.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="showcase section" id="showcase">
+                <div class="showcase-layout">
+                    <div class="showcase-panel reveal">
+                        <span class="eyebrow">Live interface</span>
+                        <h2>Design your brand story with motion and clarity.</h2>
+                        <p>Use layered sections, glowing accents, and refined typography to create a polished experience users remember.</p>
+                        <div class="showcase-list">
+                            <div><strong>Intuitive</strong> layout for conversions.</div>
+                            <div><strong>Animated</strong> feedback that guides action.</div>
+                            <div><strong>Minimal</strong> design with maximum impact.</div>
+                        </div>
+                    </div>
+
+                    <div class="showcase-cards reveal">
+                        <div class="showcase-card large-card">
+                            <div class="card-tag">Brand dashboard</div>
+                            <h3>Dynamic metrics in motion.</h3>
+                            <p>Live data panels with soft glowing accents, modern contrast, and layered depth.</p>
+                        </div>
+                        <div class="showcase-stack">
+                            <div class="showcase-card small-card">
+                                <h4>Collaboration</h4>
+                                <p>Fast team updates with a clean visual hierarchy.</p>
+                            </div>
+                            <div class="showcase-card small-card secondary">
+                                <h4>Workflow</h4>
+                                <p>Structured actions designed to improve task completion.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="newsletter section" id="connect">
+                <div class="newsletter-panel reveal">
+                    <div>
+                        <span class="eyebrow">Let's build</span>
+                        <h2>Ready to launch your own award-ready landing page?</h2>
+                        <p>Submit your email and we’ll send a custom design guide, plus a motion-driven page sample.</p>
+                    </div>
+
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" name="email" placeholder="Your best email" required>
+                        <button type="submit" class="button button-primary">Notify Me</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer reveal">
+            <div>
+                <strong>Nova Labs</strong>
+                <span>Modern UI, motion systems, and beautiful landing experiences.</span>
+            </div>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#features">Features</a>
+                <a href="#showcase">Showcase</a>
+            </div>
+        </footer>
     </div>
 
+    <div class="background-glow"></div>
+    <div class="background-grid"></div>
 
     <script src="script.js"></script>
 </body>
